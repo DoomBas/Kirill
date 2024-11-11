@@ -1,0 +1,15 @@
+f = open('Vtornik.txt')
+f1 = open('Vtornik1.txt', "w+")
+text = f.readlines()
+text1 = []
+for i in text:
+    kok1 = i.replace('{','')
+    kok2 = kok1.replace(',\n','\n')
+    kok3 = kok2.replace('\"','')
+    kok4 = kok3.replace('}','')
+    kok5 = kok4.replace('\t','  ')
+    f1.write(kok5)
+    text1.append(kok5)
+f1.close()
+print(text)
+print(text1)
